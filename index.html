@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAZE'26 - College Sports Club</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file for custom styles (gradient and glass-card) -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        /* Tailwind configuration remains here as it extends the color palette for use in HTML classes */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blaze-blue': '#0A1C4E',
+                        'blaze-red': '#4E0A0A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-black bg-opacity-70 backdrop-blur-sm p-4 shadow-xl">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo only, smaller (h-10) -->
+            <a href="#home" class="h-10 transition duration-300 transform hover:scale-110">
+                <img src="Phoenix.png" alt="BLAZE'26 Phoenix Logo" class="h-full w-auto">
+            </a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-lg text-gray-300 hover:text-white transition duration-200">About</a>
+                <a href="#sponsors" class="text-lg text-gray-300 hover:text-white transition duration-200">Sponsors</a>
+                <!-- NEW: Gallery link -->
+                <a href="#gallery" class="text-lg text-gray-300 hover:text-white transition duration-200">Gallery</a>
+                <a href="#events-list" class="text-lg text-gray-300 hover:text-white transition duration-200">Events</a>
+                <a href="#join" class="text-lg text-gray-300 hover:text-white transition duration-200">Join Us</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="text-white md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Welcome Message -->
+    <header id="home" class="min-h-screen flex items-center justify-center text-center p-6">
+        <div class="glass-card p-10 sm:p-16 rounded-3xl max-w-4xl w-full shadow-2xl animate-fade-in">
+            <h1 class="text-5xl sm:text-7xl font-black text-white uppercase leading-tight tracking-tight drop-shadow-lg">
+                WELCOME TO BLAZE'26
+            </h1>
+            <p class="text-xl sm:text-2xl text-red-300 mt-4 font-light">
+                Unleash the will of fire.
+            </p>
+            <a href="#about" class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                Learn Our Story
+            </a>
+        </div>
+    </header>
+
+    <!-- About BLAZE Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-extrabold text-white text-center mb-12 drop-shadow-md border-b-4 border-red-600 pb-2 inline-block mx-auto uppercase">
+                About Blaze
+            </h2>
+            <div class="glass-card p-8 rounded-2xl shadow-2xl mt-8">
+                <p class="text-xl text-gray-200 leading-relaxed mb-6">
+                    The National Level Sports Festival of ASMSOC, NMIMS. The Sports
+                    Festival consists of Football, Basketball, and Cricket as their main
+                    sporting events. It unites talent, teamwork and the spirit of
+                    competition of more than 5000+ sports enthusiasts from 50+ colleges.
+                </p>
+                <p class="text-xl text-gray-200 leading-relaxed mb-6">
+                    Blaze will step into its 8th edition this year and we are ecstatic to
+                    make it an unforgettable experience with your engagement and
+                    cooperation while giving your brand unmatched reach.
+                </p>
+                <p class="text-xl text-gray-200 leading-relaxed">
+                    We have welcomed colleges from Pune, Haryana, Bangalore, Kolkata,
+                    Delhi, and the surrounding area of Mumbai. We are proud to have
+                    hosted an international team from Babson College in Boston, USA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-extrabold text-white text-center mb-12 drop-shadow-md border-b-4 border-red-600 pb-2 inline-block mx-auto uppercase">
+                Past Year Sponsors
+            </h2>
+            <div class="glass-card p-4 sm:p-8 rounded-2xl shadow-2xl mt-8">
+                <!-- Using the provided image for powerful branding proof -->
+                <img src="Sponsors.png" alt="BLAZE'26 Past Year Sponsors List" class="w-full h-auto rounded-lg shadow-lg">
+                <p class="text-center text-xl font-bold text-red-300 mt-6">
+                    Partner with us to gain unmatched reach among 5000+ sports enthusiasts across 50+ colleges.
+                </p>
+                <p class="text-center text-lg text-gray-300 mt-2">
+                    Inquire about our premium branding packages through the Join Us section.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Gallery Section with Automatic Slideshow and Manual Controls -->
+    <section id="gallery" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-extrabold text-white text-center mb-12 drop-shadow-md border-b-4 border-red-600 pb-2 inline-block mx-auto uppercase">
+                Gallery: Moments of BLAZE
+            </h2>
+            <div class="glass-card p-4 sm:p-8 rounded-2xl shadow-2xl mt-8 relative overflow-hidden">
+                <div id="slideshow-container" class="relative w-full aspect-video md:aspect-[16/9]">
+                    <!-- Slides will be inserted here by JavaScript -->
+                    <!-- Placeholder to ensure layout stability -->
+                    <img src="IMG_4010.jpg" alt="Loading Gallery..." class="w-full h-full object-cover rounded-lg">
+                    
+                    <!-- Prev Button -->
+                    <button id="prev-button" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 sm:p-4 bg-black/50 hover:bg-black/70 rounded-r-lg text-white transition duration-300 focus:outline-none">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="next-button" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 sm:p-4 bg-black/50 hover:bg-black/70 rounded-l-lg text-white transition duration-300 focus:outline-none">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-4">Images change automatically every 4 seconds or use the arrows to navigate.</p>
+        </div>
+    </section>
+
+    <!-- Events List Section -->
+    <section id="events-list" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl font-extrabold text-white mb-12 drop-shadow-md">Our Events</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Event 1 (Hyperlinked) -->
+                <a href="#" class="block text-left group transition duration-300 transform hover:scale-[1.05] hover:shadow-2xl rounded-xl">
+                    <div class="glass-card p-5 rounded-xl border border-gray-600 group-hover:border-red-500">
+                        <h4 class="text-xl font-bold text-white">Football</h4>
+                        <p class="text-sm text-gray-400">Winning since '23</p>
+                        <p class="text-xs text-red-400 mt-2 font-semibold">Click to Register (Form URL goes here)</p>
+                    </div>
+                </a>
+                
+                <!-- Event 2 (Hyperlinked) -->
+                <a href="#" class="block text-left group transition duration-300 transform hover:scale-[1.05] hover:shadow-2xl rounded-xl">
+                    <div class="glass-card p-5 rounded-xl border border-gray-600 group-hover:border-red-500">
+                        <h4 class="text-xl font-bold text-white">Basketball</h4>
+                        <p class="text-sm text-gray-400">State qualifiers</p>
+                        <p class="text-xs text-red-400 mt-2 font-semibold">Click to Register (Form URL goes here)</p>
+                    </div>
+                </a>
+                
+                <!-- Event 3 (Hyperlinked) -->
+                <a href="#" class="block text-left group transition duration-300 transform hover:scale-[1.05] hover:shadow-2xl rounded-xl">
+                    <div class="glass-card p-5 rounded-xl border border-gray-600 group-hover:border-red-500">
+                        <h4 class="text-xl font-bold text-white">Cricket</h4>
+                        <p class="text-sm text-gray-400">Competitive league</p>
+                        <p class="text-xs text-red-400 mt-2 font-semibold">Click to Register (Form URL goes here)</p>
+                    </div>
+                </a>
+                
+                <!-- Event 4 (Hyperlinked) -->
+                <a href="#" class="block text-left group transition duration-300 transform hover:scale-[1.05] hover:shadow-2xl rounded-xl">
+                    <div class="glass-card p-5 rounded-xl border border-gray-600 group-hover:border-red-500">
+                        <h4 class="text-xl font-bold text-white">FIFA</h4>
+                        <p class="text-sm text-gray-400">Record breakers</p>
+                        <p class="text-xs text-red-400 mt-2 font-semibold">Click to Register (Form URL goes here)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Join Us Section -->
+    <section id="join" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center glass-card p-10 rounded-2xl shadow-xl border border-white/30">
+            <h2 class="text-4xl font-extrabold text-white mb-4">Ready to Join the BLAZE?</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Whether you're a varsity athlete, a casual player, or just a passionate fan, there's a place for you in BLAZE'26.
+            </p>
+            <form class="space-y-4">
+                <input type="email" placeholder="Your College Email" class="w-full md:w-2/3 p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-red-500 focus:border-red-500 transition duration-200 border border-transparent focus:border-red-500" required>
+                <button type="submit" class="w-full md:w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    Sign Up for Updates
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-70 p-6 mt-10">
+        <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm">
+            <p>&copy; 2026 BLAZE'26 Sports Club. Powered by Student Spirit.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-white transition duration-200">Contact</a>
+                <a href="#" class="hover:text-white transition duration-200">Privacy</a>
+                <a href="#" class="hover:text-white transition duration-200">Socials</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const imageFiles = [
+            "DSC_0060.jpg",
+            "DSC_0077.jpg",
+            "DSC_0094.jpg",
+            "IMG_4010.jpg",
+            "IMG_4027.jpg",
+            "IMG_7734.jpg",
+            "blaze.jpeg",
+            "blaze2.jpeg",
+            "basketball.jpeg",
+            "cricket.jpeg"
+        ];
+        let currentImageIndex = 0;
+        let slideshowInterval;
+        const container = document.getElementById('slideshow-container');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+
+        // Function to reset the auto-slideshow timer
+        function resetInterval() {
+            clearInterval(slideshowInterval);
+            slideshowInterval = setInterval(nextSlide, 3000);
+        }
+
+        // Function to create the image element
+        function createSlide(src) {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = "BLAZE'26 Event Photo";
+            // Ensure transition-opacity is present for smooth fade
+            img.className = 'absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-opacity duration-1000';
+            img.style.opacity = 0; // Start hidden
+            return img;
+        }
+
+        // Initialize slides (create all of them)
+        const slides = imageFiles.map(createSlide);
+        slides.forEach(slide => container.appendChild(slide));
+
+        // Function to show the current slide
+        function showSlide(index) {
+            // Use modulo operator to ensure index wraps around (looping is constant)
+            currentImageIndex = (index + slides.length) % slides.length; 
+            
+            // Hide all slides, then show the current one
+            slides.forEach((slide, i) => {
+                slide.style.opacity = (i === currentImageIndex) ? 1 : 0;
+                slide.style.zIndex = (i === currentImageIndex) ? 10 : 1;
+            });
+        }
+
+        // Main function to advance the slideshow automatically
+        function nextSlide() {
+            showSlide(currentImageIndex + 1);
+        }
+
+        // Event listener for previous button
+        prevButton.addEventListener('click', () => {
+            showSlide(currentImageIndex - 1);
+            resetInterval(); // Reset timer on user interaction
+        });
+
+        // Event listener for next button
+        nextButton.addEventListener('click', () => {
+            showSlide(currentImageIndex + 1);
+            resetInterval(); // Reset timer on user interaction
+        });
+
+        // Start the slideshow only if images exist
+        if (slides.length > 0) {
+            // Display the first image immediately
+            showSlide(currentImageIndex);
+            // Start the interval for 3 seconds (3000 milliseconds)
+            resetInterval();
+        }
+    </script>
+</body>
+</html>

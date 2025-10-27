@@ -1,0 +1,18 @@
+/* Custom CSS for BLAZE'26 Sports Club Website */
+
+/* Custom CSS for the dark blue to dark red fading background */
+/* Starting from BLACK and transitioning to a deep, dark red */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Updated gradient: Black (#000000) at 0% to Dark Red (#4E0A0A) at 100% */
+    background: linear-gradient(to bottom, #000000 15%, #10103b 85%);
+    background-attachment: fixed; /* Ensures the gradient covers the whole scrollable area */
+    min-height: 100vh;
+}
+
+/* Custom styles for card effect (Glassmorphism) */
+.glass-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
