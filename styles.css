@@ -4,15 +4,25 @@
 /* Starting from BLACK and transitioning to a deep, dark red */
 body {
     font-family: 'Inter', sans-serif;
-    /* Updated gradient: Black (#000000) at 0% to Dark Red (#4E0A0A) at 100% */
-    background: linear-gradient(to bottom, #000000 15%, #10103b 85%);
-    background-attachment: fixed; /* Ensures the gradient covers the whole scrollable area */
+    color: #ffffff; /* Sets default text color to white for contrast */
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
+    
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed; /* Ensures background stays fixed while scrolling */
 }
 
 /* Custom styles for card effect (Glassmorphism) */
 .glass-card {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(10, 25, 48, 0.4); /* Darker, bluish semi-transparent background */
+    backdrop-filter: blur(10px);        /* Increased blur for better readability */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);  /* Deep shadow for depth */
+    border-radius: 16px;
 }
